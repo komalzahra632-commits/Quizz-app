@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Take a quick general knowledge quiz and see how you score."
+    />
+    <title>Quick Quiz — A little test of everything</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Quick Quiz home">
+          <span class="brand-mark" aria-hidden="true">q</span>
+          <span>quick<span class="brand-accent">quiz</span></span>
+        </a>
+        <span class="topbar-note"><span class="status-dot"></span> A little brain break</span>
+      </header>
+
+      <section class="quiz-card" aria-labelledby="page-title">
+        <div class="intro">
+          <span class="eyebrow">THE EVERYDAY QUIZ</span>
+          <h1 id="page-title">A little test<br />of <span>everything.</span></h1>
+          <p>Eight questions, a few surprising facts, and a fresh little challenge.</p>
+        </div>
+
+        <div class="quiz-content" id="quiz-content">
+          <div class="quiz-meta">
+            <span class="question-count" id="question-count">QUESTION 01 <span>/ 08</span></span>
+            <span class="score-pill"><span aria-hidden="true">✦</span> <span id="live-score">0</span> points</span>
+          </div>
+
+          <div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0">
+            <span class="progress-fill" id="progress-fill"></span>
+          </div>
+
+          <div class="question-area" id="question-area" aria-live="polite">
+            <h2 id="question-text"></h2>
+            <div class="answer-list" id="answer-list" role="group" aria-label="Answer choices"></div>
+          </div>
+
+          <div class="quiz-footer">
+            <span class="selection-hint" id="selection-hint">Choose the best answer to continue</span>
+            <button class="next-button" id="next-button" type="button" disabled>
+              <span id="next-label">Next question</span>
+              <span class="button-arrow" aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+
+        <section class="result-screen" id="result-screen" aria-live="polite" hidden>
+          <div class="result-icon" aria-hidden="true">✦</div>
+          <span class="eyebrow">THAT'S A WRAP</span>
+          <h2 id="result-heading">Nicely done.</h2>
+          <p class="result-copy" id="result-copy"></p>
+          <div class="result-score">
+            <span class="result-score-number" id="final-score">0</span>
+            <span class="result-score-label">out of 8 points</span>
+          </div>
+          <button class="next-button restart-button" id="restart-button" type="button">
+            <span>Have another go</span>
+            <span class="button-arrow" aria-hidden="true">↻</span>
+          </button>
+        </section>
+
+        <footer class="card-footer">
+          <span>Trust your first instinct <span aria-hidden="true">✳</span></span>
+          <span>NO. <span id="footer-question">01</span> <span class="footer-divider">/</span> 08</span>
+        </footer>
+      </section>
+
+      <p class="page-note">Made for curious minds <span aria-hidden="true">·</span> Take your time</p>
+    </main>
+  </body>
+</html>
